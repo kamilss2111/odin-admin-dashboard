@@ -2,8 +2,9 @@
 
 :root {
     --main-color: #022c22;
-    --secondary-color: #6ee7b7;
+    --secondary-color: #047857;
     --third-color: #d1fae5;
+    --motive-color: #10b981;
 }
 
 
@@ -26,8 +27,12 @@ h1 {
     font-weight: 700;
 }
 
-h3 {
+h3, h4 {
     font-weight: 500;
+}
+
+svg {
+    width: 1.5rem;
 }
 
 .header {
@@ -37,10 +42,6 @@ h3 {
     grid-template-columns: 3fr 1fr;
     gap: 15px 0;
     align-items: center;
-}
-
-.header svg {
-    width: 1.5rem;
 }
 
 .search {
@@ -54,7 +55,6 @@ h3 {
     border-radius: 15px;
     border: none;
     height: 25px;
-    color: var(--third-color);
 }
 
 .account {
@@ -137,7 +137,6 @@ h3 {
 }
 
 .nav > svg {
-    width: 1.5rem;
     justify-self: center;
     fill: white;
 }
@@ -150,11 +149,111 @@ h3 {
 }
 
 .branding > svg {
-    width: 1.5rem;
     justify-self: center;
     fill: white;
 }
 
 .main {
     background-color: var(--third-color);
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 25px;
+    padding: 30px 50px;
+}
+
+.projects {
+    grid-row: 1 / 3;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-top: 10px;
+}
+
+.card {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: var(--motive-color);
+    box-shadow: 0 0 15px 1px var(--main-color);
+}
+
+.Description > p {
+    font-size: 14px;
+}
+
+.controls {
+    place-self: end;
+    display: flex;
+    gap: 10px;
+}
+
+.announcments {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.info {
+    margin-top: 10px;
+    padding: 20px;
+    display: grid;
+    gap: 5px;
+    background-color: var(--motive-color);
+    border-radius: 5px;
+    box-shadow: 0 0 15px 1px var(--main-color);
+}
+
+.info p {
+    font-size: 12px;
+}
+
+.info > hr {
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+}
+
+.trending {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    
+}
+
+.trending-profiles {
+    margin-top: 10px;
+    display: grid;
+    gap: 20px;
+    background-color: var(--motive-color);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px 1px var(--main-color);
+}
+
+.profile {
+    display: grid;
+    grid-template-columns: 65px 1fr;
+    grid-template-rows: 1fr 1fr;
+    place-content: center;
+}
+
+.trending-profile {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    width: 50px;
+    height: 50px;
+    background-image: url(./img/profile-picture.png);
+    background-size: contain;
+    border-radius: 50%;
+}
+
+.profile > p {
+    font-size: 16px;
+}
+
+.profile > p:first-of-type {
+    align-self: end;
+    font-weight: 600;
 }
